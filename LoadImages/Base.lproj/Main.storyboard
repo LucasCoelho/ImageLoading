@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ith-YU-GVc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="1tB-b7-cEY">
+            <objects>
+                <viewController id="ith-YU-GVc" customClass="MasterViewController" customModule="LoadImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lsJ-OW-v6N"/>
+                        <viewControllerLayoutGuide type="bottom" id="WPu-An-fT0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OgY-Fi-OlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="129" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mLL-gJ-YKr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="128" id="m0d-ak-lc9" customClass="TableViewCell" customModule="LoadImages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tKH-j8-35V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="j8C-i3-nbH"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tKH-j8-35V" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="top" id="WlZ-ol-0Jv"/>
+                                                <constraint firstItem="tKH-j8-35V" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leading" id="hp3-Qt-pLU"/>
+                                                <constraint firstAttribute="trailing" secondItem="tKH-j8-35V" secondAttribute="trailing" id="rMq-87-eal"/>
+                                                <constraint firstAttribute="bottom" secondItem="tKH-j8-35V" secondAttribute="bottom" id="tjQ-vE-7bf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="imageHeight" destination="j8C-i3-nbH" id="Oyi-DN-jvd"/>
+                                            <outlet property="mainImage" destination="tKH-j8-35V" id="gbj-rs-XDd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ith-YU-GVc" id="PdI-d3-Rx3"/>
+                                    <outlet property="delegate" destination="ith-YU-GVc" id="xNO-4p-vuh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mLL-gJ-YKr" firstAttribute="top" secondItem="OgY-Fi-OlZ" secondAttribute="top" id="Ad5-6t-NvY"/>
+                            <constraint firstItem="mLL-gJ-YKr" firstAttribute="leading" secondItem="OgY-Fi-OlZ" secondAttribute="leading" id="Cof-yG-Dfj"/>
+                            <constraint firstItem="WPu-An-fT0" firstAttribute="top" secondItem="mLL-gJ-YKr" secondAttribute="bottom" id="lIA-JZ-i96"/>
+                            <constraint firstAttribute="trailing" secondItem="mLL-gJ-YKr" secondAttribute="trailing" id="nvF-sw-XEv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="mLL-gJ-YKr" id="rFS-fr-zC3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fq3-1u-HaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="-524"/>
+        </scene>
+    </scenes>
+</document>
